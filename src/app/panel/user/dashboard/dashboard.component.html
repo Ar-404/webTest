@@ -1,0 +1,40 @@
+<app-header-comp [isVisible]="isVisible" (isLogout)="isLogout($event)"></app-header-comp>
+<!-- <div class="row bg text-center"> -->
+  
+<!-- </div> -->
+ <div class="container-fluid">
+  <div class="row px-4 pt-4">
+    <ng-container *ngFor="let product of productList">
+      <div class="card col-md-2 p-2 mr-2 cardMrgin">
+          <img class="card-img-top imgSize" [src]="product.imageUrl" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Product Name: {{product.productName}}</h5>
+            <p class="card-text">Rs.: {{product.productPrice}}</p>
+            <p class="card-text">Offer Rs.: {{product.productOffer}}</p>
+            <i *ngIf="isLogged" class="fa fa-pencil-square-o mr-1 editHover" aria-hidden="true" (click)="details(product.id)"></i>
+            <i *ngIf="isLogged" class="fa fa-trash deleteHover" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="setDeleteItem(product)"></i>
+          </div>
+      </div>
+    </ng-container>
+  </div>
+ </div>
+<app-footer-comp></app-footer-comp>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete product</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure want to delete?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btnBg" (click)="delete()" data-bs-dismiss="modal">Yes, Delete It.</button>
+      </div>
+    </div>
+  </div>
+</div>

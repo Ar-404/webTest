@@ -1,0 +1,15 @@
+<app-header-comp [isVisible]="isVisible"></app-header-comp>
+<form [formGroup]='registrationForm'>
+  <div class="card my-5 logingBoard p-2">
+    <div class="card-body">
+      <h5 class="card-title">Signup</h5>
+      <div class="row mt-5">
+        <input class="col-md-12 mt-3" type="text" formControlName="name" placeholder="Name">
+        <input class="col-md-12 mt-3" type="text" formControlName="email" placeholder="Email">
+        <input class="col-md-12 mt-3" type="password" formControlName="password" placeholder="Password">
+        <button class="btn btn-primary mt-3" type="submit" (click)="submit()">Signup</button>
+      </div>
+    </div>
+  </div>
+</form>
+<app-footer-comp></app-footer-comp>

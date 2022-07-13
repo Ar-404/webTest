@@ -1,0 +1,16 @@
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+.btn-primary{
+    background-color: rgb(150, 71, 71);
+    border: 1px solid rgb(150, 71, 71);
+}
+
+.logingBoard{
+    width: 500px;
+    background-color:  rgb(255, 221, 221);
+    border: 2px solid #fff;
+}

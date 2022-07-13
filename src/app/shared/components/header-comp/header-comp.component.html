@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row p-3 header">
+        <div class="col-md-8">
+            <h3>WebTest Mart</h3>
+        </div>
+        <div class="col-md-2 text-end my-2" (click)="addProduct()">
+            <p *ngIf="isLogged">Add Product</p>
+        </div>
+        <div *ngIf="isLogged" class="col-md-2 text-end">
+            <div class="dropdown ">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" (click)="addProduct()">Add Product</a></li>
+                    <li><a class="dropdown-item" (click)="logOut()">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <div *ngIf="!isLogged && isVisible" class="col-md-2 text-end my-2" (click)="loginPage()">
+            Login
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+.bg{
+    background-color: rgb(255, 221, 221);
+}
+
+.btnBg{
+    background-color: rgb(212, 139, 139);
+}
+
+.imgSize{
+    height: 120px;
+}
+.editHover{
+    margin-right: 5px;
+    padding: 5px;
+    border: 1px solid rgb(212, 139, 139);
+}
+.editHover:hover{
+    background-color: rgb(212, 139, 139);
+    color: aliceblue;
+    padding: 5px;
+}
+
+.deleteHover{
+    margin-right: 5px;
+    padding: 5px;
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.deleteHover:hover{
+    background-color: rgb(255, 0, 0);
+    color: aliceblue;
+    padding: 5px;
+}
+
+.cardMrgin{
+    margin-right: 10px;
+}
+
+.bodyHight{
+    height: 100%;
+}

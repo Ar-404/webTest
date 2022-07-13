@@ -1,0 +1,23 @@
+<app-header-comp [isVisible]="isVisible"></app-header-comp>
+<form [formGroup] = 'loginForm'>
+<div class="card my-5 logingBoard p-2" >
+    <!-- <img class="card-img-top" src="assets/download.jpeg" alt="Card image cap"> -->
+    <div class="card-body">
+      <h5 class="card-title">Login</h5>
+      <div class="row mt-5">
+        <input class="col-md-12 mt-3" type="text" formControlName="email" placeholder="Email">
+        <input class="col-md-12 mt-3" type="password" formControlName="password" placeholder="Password">
+        <div *ngIf="isWrongPassEmail" class="alert alert-danger d-flex align-items-center mt-3" role="alert">
+          <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+          <div>
+            Entered Email or Password wrong!!
+          </div>
+        </div>
+        <button class="btn btn-primary mt-3" type="submit" (click)="submit()">Login</button>
+        <button class="btn btn-primary mt-3" type="submit" (click)="signup()">Signup</button>
+      </div>
+    </div>
+</div>
+</form>
+
+<app-footer-comp></app-footer-comp>

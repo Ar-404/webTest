@@ -1,0 +1,21 @@
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+.btn-delete {
+    color: #ffffff;
+    background-color: rgb(255, 41, 41);
+}
+
+.productBoard{
+    width: 500px;
+    background-color:  rgb(255, 221, 221);
+    border: #ffffff 2px solid;
+}
+
+.btn-primary{
+    background-color: rgb(150, 71, 71);
+    border: 1px solid rgb(150, 71, 71);
+}
